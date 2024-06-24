@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagen/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto BBVA</title>
+</head>
+<body>
+    <nav class = "nav_img">
+        <img src = "Imagen/logo_bbva.webp" alt="Logo BBVA">
+        <h2 class = "contacto_p">Contactanos</h2>
+    </nav>   
+    <header>
+        <h1>Completá tus datos</h1>
+    </header> 
+    <article>
+        <form class = "formulario" id = "form">
+            <div class = "nombre_contenedor">
+                <label for = "nombre" class = "nombre_l">Nombre</label>
+                <div class = "contmsjerror">
+                    <input type = "text" id = "nombre" name = "nombre" class = "nombre" placeholder = "Nombre">
+                    <div class="msjError" id="error_nombre"></div>
+                </div>
+            </div>
+            <div class = "apellido_contenedor">
+                <label for = "apellido" class = "apellido_l">Apellido</label>
+                <div class = "contmsjerror">
+                    <input type = "text" id = "apellido" name = "apellido" class = "apellido" placeholder = "Apellido">
+                    <div class="msjError" id="error_apellido"></div>
+                </div>
+            </div>
+            <div class = "email_contenedor">
+                <label for = "email" class = "email_l">Email</label>
+                <div class = "contmsjerror">
+                    <input type="text" id = "email" name = "email" class = "email" placeholder = "Email">
+                    <div class="msjError" id="error_email"></div>
+                </div>
+            </div>
+            <div class = "telefono_contenedor">
+                <label for = "telefono" class = "telefono_l">Telefono</label>
+                <div class = "contmsjerror">
+                    <input type = "tel" id = "telefono" class = "telefono" placeholder = "Telefono">
+                    <div class="msjError" id="error_telefono"></div>
+                </div>
+            </div>
+            <div class = "producto_contenedor">
+                <label for = "producto" class = "producto_l"> Productos BBVA </label>
+                <div class = "contmsjerror">
+                    <select name = "producto" id = "opciones" class = "producto"> 
+                        <option value = "cuenta"> Apertura de cuenta </option>
+                        <option value = "tarjeta"> Tarjeta </option>
+                        <option value = "personal"> Prestamo Personal </option>
+                        <option value = "hipotecario"> Prestamo Hipotecario </option>
+                        <option value = "inversion"> Inversiones </option>
+                        <option value = "otro"> Otro producto BBVA </option>
+                    </select>
+                    <div class="msjError" id="error_producto"></div>
+                </div>
+            </div>
+            <div class = "mensaje_contenedor">
+                <label for = "mensaje" class = "mensaje_l"> Dejanos tu consulta</label>
+                <div class = "contmsjerror">
+                    <textarea name = "mensaje" id = "mensaje" cols = "50" rows = "10" class = "mensaje" placeholder = "Dejanos tu consulta"></textarea>
+                    <div class="msjErrortext" id="error_mensaje"></div>
+                </div>                
+            </div>
+            <button type = "submit" class = "boton">Enviar</button>
+        </form>
+        <div id = "mensajeEnviado" class = "animacion hidden">
+            <div class = "check"></div>
+            <p>El formulario se envío exitosamente</p>
+        </div>
+    </article>
+    <script src = "srcipt.js"></script>
+</body>
+</html>

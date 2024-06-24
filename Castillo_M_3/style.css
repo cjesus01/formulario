@@ -1,0 +1,1087 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #1c5ba3;
+    margin-bottom: 1%;
+    height: 60px;
+}
+
+img{
+    height: 60px;
+    margin-left: 35px;
+}
+
+h2{
+    color: #ffffff;
+    margin-left: 75%;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin-left: 15%;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nombre_contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 40%;
+}
+
+.apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 40%;
+}
+
+.nombre_l, .apellido_l, .email_l, .telefono_l, .producto_l, .mensaje_l{
+    font-size: 120%;
+    font-family: 'Arial, Helvetica, sans-serifd';
+    margin-top: 5%;
+    margin-bottom: 15px;
+}
+
+.nombre, .apellido, .email, .telefono{
+    height: 40px;
+    width: 1000px;
+    font-family: 'Arial, Helvetica, sans-serifd';
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #1c5ba3;
+}
+
+.producto{
+    height: 40px;
+    width: 1000px;
+    font-family: 'Arial, Helvetica, sans-serifd';
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #1c5ba3;
+}
+
+.mensaje{
+    height: 40px;
+    width: 1000px;
+    font-family: 'Arial, Helvetica, sans-serifd';
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #1c5ba3;
+}
+
+input:focus{
+    border: solid 2px #1c5ba3;
+}
+
+textarea:focus{
+    border: solid 2px #1c5ba3;
+}
+
+textarea{
+    resize: none;
+}
+
+.boton{
+    background-color: #ffffff;
+    margin-left: 25%;
+    margin-top: 5%;
+    height: 50px;
+    width: 100px;
+    border: solid 1px #1c5ba3;
+    border-radius: 10px;
+}
+
+.boton:hover{
+    background-color: #1c5ba3;
+    color: #ffffff;
+    border: none;
+}
+
+.error{
+    border: solid 1px rgb(255, 0, 0);
+}
+
+.contmsjerror{
+    display: flex;
+    flex-direction: row;
+}
+
+.msjError{
+    color: rgb(255, 0, 0);
+    margin-left: 2%;
+    margin-top: 1.5%;
+    width: 60%;
+}
+
+.msjErrortext{
+    color: rgb(255, 0, 0);
+    margin-left: 2%;
+    margin-right: -65%;
+    margin-top: 1.5%;
+    width: 200%;
+}
+
+.animacion{
+    display: none;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mensajeEnviado{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1000;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.check {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    animation: checkExpand 0.5s ease-in-out forwards, checkAppear 0.5s ease-in-out forwards;
+}
+
+@keyframes checkExpand {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes checkAppear {
+    from { width: 0; height: 0; }
+    to { width: 50px; height: 50px; }
+}
+
+.check::after {
+    content: '✔';
+    color: white;
+    font-size: 30px;
+    display: flex;
+    animation: checkTextAppear 0.5s 0.5s forwards;
+}
+
+@keyframes checkTextAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 1200px){
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        background-color: #1c5ba3;
+        margin-bottom: 1%;
+        height: 60px;
+    }
+    
+    img{
+        height: 60px;
+        margin-left: 35px;
+    }
+    
+    h2{
+        color: #ffffff;
+        font-size: 20px;
+        margin-left: 70%;
+        margin-top: 1.4%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header{
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+    
+    h1{
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form{
+        height: 100vh;
+    }
+    
+    input:focus{
+        border: solid 1px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 1px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+    
+    .nombre_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .nombre_l, .apellido_l, .email_l, .telefono_l, .producto_l, .mensaje_l{
+        font-size: 120%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        margin-top: 5%;
+        margin-bottom: 5px;
+    }
+    
+    .nombre, .apellido, .email, .telefono{
+        height: 40px;
+        margin-right: 2%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        border: none;
+        border-bottom: solid 1px #1c5ba3;
+    }
+
+    .producto{
+        height: 40px;
+        width: 1000px;
+        margin-right: 2%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        border: none;
+        outline: none;
+        border-bottom: solid 1px #1c5ba3;
+    }
+    
+    .mensaje{
+        height: 40px;
+        width: 900px;
+        margin-right: 5%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        border: none;
+        outline: none;
+        border-bottom: solid 1px #1c5ba3;
+    }
+    
+    .boton{
+        background-color: #ffffff;
+        margin-left: 31%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+    
+    .contmsjerror{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .msjError{
+        color: rgb(255, 0, 0);
+        margin-left: 2%;
+        margin-right: -65%;
+        margin-top: 1.5%;
+        width: 60%;
+    }
+    
+    .msjErrortext{
+        color: rgb(255, 0, 0);
+        margin-left: -1%;
+        margin-right: -106%;
+        margin-top: 3.5%;
+        font-size: 13px;
+        width: 112%;
+    }
+}
+
+@media (max-width: 1100px){
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        background-color: #1c5ba3;
+        margin-bottom: 1%;
+        height: 60px;
+    }
+    
+    img{
+        height: 60px;
+        margin-left: 35px;
+    }
+    
+    h2{
+        color: #ffffff;
+        margin-left: 70%;
+        margin-top: 1.5%;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header{
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+    
+    h1{
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form{
+        height: 100vh;
+    }
+    
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+    
+    .nombre_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .nombre_l, .apellido_l, .email_l, .telefono_l, .producto_l, .mensaje_l{
+        font-size: 120%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        margin-top: 5%;
+        margin-bottom: 5px;
+    }
+    
+    .boton{
+        background-color: #ffffff;
+        margin-left: 30%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+        
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje{
+        height: 40px;
+        width: 500px;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        border: none;
+        border-bottom: solid 1px #1c5ba3;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+
+    .contmsjerror{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .msjError{
+        color: rgb(255, 0, 0);
+    }
+    
+    .msjErrortext{
+        color: rgb(255, 0, 0);
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 1000px){
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        background-color: #1c5ba3;
+        margin-bottom: 1%;
+        height: 60px;
+    }
+    
+    img{
+        height: 60px;
+        margin-left: 35px;
+    }
+    
+    h2{
+        color: #ffffff;
+        margin-left: 70%;
+        margin-top: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header{
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+    
+    h1{
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form{
+        height: 100vh;
+    }
+    
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+    
+    .nombre_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 40%;
+    }
+    
+    .nombre_l, .apellido_l, .email_l, .telefono_l, .producto_l, .mensaje_l{
+        font-size: 120%;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        margin-top: 5%;
+        margin-bottom: 5px;
+    }
+    
+    .boton{
+        background-color: #ffffff;
+        margin-left: 30%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje{
+        height: 40px;
+        width: 500px;
+        font-family: 'Arial, Helvetica, sans-serifd';
+        border: none;
+        border-bottom: solid 1px #1c5ba3;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+
+@media (max-width: 900px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    img {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 70%;
+        margin-top: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 70%;
+    }
+
+    .boton{
+        background-color: #ffffff;
+        margin-left: 30%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 800px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 70%;
+        margin-top: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        margin-left: 70%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 80%;
+    }
+
+    .boton{
+        background-color: #ffffff;
+        margin-left: 30%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 700px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    img {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 60%;
+        margin-top: 3%;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 70%;
+    }
+
+    .boton{
+        background-color: #ffffff;
+        margin-left: 28%;
+        margin-top: 7%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 600px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    img {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 55%;
+        margin-top: 3.5%;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 70%;
+    }
+
+    .boton{
+        background-color: #ffffff;
+        margin-left: 26%;
+        margin-top: 6%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 500px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    img {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 70%;
+        margin-top: 2%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 70%;
+    }
+
+    .boton {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        display: block;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 500px){
+    nav {
+        flex-direction: row;
+        background-color: #1c5ba3;
+    }
+
+    img {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
+
+    h2{
+        color: #ffffff;
+        margin-left: 50%;
+        margin-top: 4%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea:focus{
+        border: solid 2px #1c5ba3;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+
+    .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+        width: 70%;
+    }
+
+    .boton{
+        background-color: #ffffff;
+        margin-left: 24%;
+        margin-top: 6%;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #1c5ba3;
+        border-radius: 10px;
+    }
+    
+    .boton:hover{
+        background-color: #1c5ba3;
+        color: #ffffff;
+        border: none;
+    }
+
+    .error{
+        border: solid 1px rgb(255, 0, 0);
+    }
+}
+
+    @media (max-width: 400px){
+        nav {
+            flex-direction: row;
+            background-color: #1c5ba3;
+        }
+    
+        img {
+            height: 60px;
+            margin-bottom: 10px;
+            margin-left: 2px;
+        }
+    
+        h2{
+            color: #ffffff;
+            margin-left: 45%;
+            margin-top: 6%;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        header {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        input:focus{
+            border: solid 2px #1c5ba3;
+        }
+        
+        textarea:focus{
+            border: solid 2px #1c5ba3;
+        }
+        
+        textarea{
+            resize: none;
+        }
+    
+        .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    
+        .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+            width: 70%;
+        }
+    
+        .boton{
+            background-color: #ffffff;
+            margin-left: 30%;
+            margin-top: 9%;
+            height: 50px;
+            width: 100px;
+            border: solid 1px #1c5ba3;
+            border-radius: 10px;
+        }
+        
+        .boton:hover{
+            background-color: #1c5ba3;
+            color: #ffffff;
+            border: none;
+        }
+
+        .error{
+            border: solid 1px rgb(255, 0, 0);
+        }
+    }
+
+    @media (max-width: 300px){
+        nav {
+            flex-direction: row;
+            background-color: #1c5ba3;
+        }
+    
+        img {
+            height: 60px;
+            margin-bottom: 10px;
+            margin-left: 2px;
+        }
+    
+        h2{
+            color: #ffffff;
+            margin-left: 35%;
+            margin-top: 7.5%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        header {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    
+        .nombre_contenedor, .apellido_contenedor, .email_contenedor, .telefono_contenedor, .producto_contenedor, .mensaje_contenedor {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    
+        .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+            width: 100%;
+        }
+    
+
+        .nombre, .apellido, .email, .telefono, .producto, .mensaje {
+            width: 70%;
+        }
+    
+        .boton{
+            background-color: #ffffff;
+            margin-left: 26%;
+            margin-top: 3%;
+            height: 50px;
+            width: 100px;
+            border: solid 1px #1c5ba3;
+            border-radius: 10px;
+        }
+        
+        .boton:hover{
+            background-color: #1c5ba3;
+            color: #ffffff;
+            border: none;
+            
+        }
+        .error{
+            border: solid 1px rgb(255, 0, 0);
+        }
+   }
